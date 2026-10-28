@@ -88,7 +88,7 @@
         .hero {
             padding: 80px 0 60px;
             text-align: center;
-            background-color: #102C28; /* Изумрудный акцент для верха */
+            background-color: #102C28;
             border-bottom: 1px solid rgba(198, 166, 107, 0.2);
         }
 
@@ -166,7 +166,7 @@
         }
 
         .concept-card {
-            background: #143631; /* Карточки другого оттенка для контраста */
+            background: #143631;
             border: 1px solid rgba(198, 166, 107, 0.2);
             padding: 30px 20px;
             border-radius: 8px;
@@ -191,8 +191,8 @@
             color: rgba(241, 235, 221, 0.7);
         }
 
-        /* --- Блок связи с каналом --- */
-        .telegram-feed {
+        /* --- Новостной блок Telegram --- */
+        .telegram-news {
             padding: 70px 0;
             background-color: #102C28;
             border-top: 1px solid rgba(198, 166, 107, 0.2);
@@ -200,13 +200,25 @@
             text-align: center;
         }
 
-        .widget-wrapper {
-            max-width: 500px;
+        .news-card {
+            max-width: 600px;
             margin: 30px auto 0;
             background: #143631;
             border: 1px solid rgba(198, 166, 107, 0.3);
             border-radius: 12px;
-            padding: 25px;
+            padding: 40px 30px;
+        }
+
+        .news-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: #F1EBDD;
+        }
+
+        .news-card p {
+            font-size: 0.95rem;
+            color: rgba(241, 235, 221, 0.8);
+            margin-bottom: 25px;
         }
 
         /* --- Каналы и контакты --- */
@@ -331,17 +343,16 @@
         </div>
     </section>
 
-    <!-- Telegram Feed Section -->
-    <section class="telegram-feed">
+    <!-- Telegram News Section -->
+    <section class="telegram-news">
         <div class="container">
-            <h2 class="section-title">Канал в Telegram</h2>
-            <p style="color: #839D8E; margin-bottom: 10px;">Прямой переход к публикациям и мыслям</p>
+            <h2 class="section-title">Свежие публикации и новости</h2>
+            <p style="color: #839D8E; margin-bottom: 10px;">Все актуальные заметки, мысли и статьи публикуются в канале</p>
             
-            <div class="widget-wrapper">
-                <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-discussion="LyisanAlchemy" data-comments-limit="5" data-width="100%"></script>
-                <div style="margin-top: 15px;">
-                    <a href="https://t.me/LyisanAlchemy" target="_blank" class="btn-gold">Открыть канал в Telegram</a>
-                </div>
+            <div class="news-card">
+                <h3>Канал «Алхимия жизни»</h3>
+                <p>Читайте новые посты, делитесь откликами и участвуйте в обсуждениях напрямую в нашем Telegram-канале.</p>
+                <a href="https://t.me/LyisanAlchemy" target="_blank" class="btn-gold">Перейти к публикациям</a>
             </div>
         </div>
     </section>
@@ -379,7 +390,7 @@
                     </div>
                     <div class="btn-group">
                         <a href="https://wa.me/79650116007" target="_blank" class="btn-gold-sm">WhatsApp</a>
-                        <a href="tel:+79650116007" class="btn-gold-sm">Позвонить</a>
+                        <a href="tel:+79650116007" target="_blank" class="btn-gold-sm">Позвонить</a>
                     </div>
                 </div>
             </div>
