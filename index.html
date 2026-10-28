@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Алхимия жизни ~ Пятый элемент</title>
-    <!-- Подключение шрифтов Cormorant Garamond и Montserrat -->
+    <!-- Подключение шрифтов -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
@@ -17,8 +17,8 @@
             --gold: #C6A66B;
             --gold-light: #E0C286;
             --sage: #839D8E;
-            --border-gold: rgba(198, 166, 107, 0.25);
-            --card-bg: rgba(16, 44, 40, 0.5);
+            --border-gold: rgba(198, 166, 107, 0.3);
+            --card-bg: #143631;
         }
 
         * {
@@ -33,7 +33,6 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 300;
             line-height: 1.8;
-            background-image: radial-gradient(circle at 50% 0%, var(--bg-emerald) 0%, var(--bg-dark) 75%);
             min-height: 100vh;
         }
 
@@ -61,13 +60,12 @@
 
         /* --- Шапка --- */
         header {
-            padding: 30px 0;
+            padding: 25px 0;
             border-bottom: 1px solid var(--border-gold);
-            backdrop-filter: blur(12px);
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(10, 30, 27, 0.85);
+            background: rgba(10, 30, 27, 0.95);
         }
 
         .nav-wrapper {
@@ -77,7 +75,7 @@
         }
 
         .logo {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-family: 'Cormorant Garamond', serif;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -92,9 +90,9 @@
 
         .nav-link-btn {
             border: 1px solid var(--border-gold);
-            padding: 8px 20px;
+            padding: 8px 18px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             letter-spacing: 1px;
             text-transform: uppercase;
             color: var(--ivory);
@@ -107,8 +105,10 @@
 
         /* --- Главный экран --- */
         .hero {
-            padding: 110px 0 80px;
+            padding: 100px 0 70px;
             text-align: center;
+            background-color: var(--bg-emerald);
+            border-bottom: 1px solid var(--border-gold);
         }
 
         .hero-subtitle {
@@ -120,7 +120,7 @@
         }
 
         .hero h1 {
-            font-size: 3.6rem;
+            font-size: 3.4rem;
             line-height: 1.15;
             margin-bottom: 25px;
             color: var(--ivory);
@@ -130,7 +130,7 @@
             font-size: 1.1rem;
             max-width: 620px;
             margin: 0 auto 40px;
-            color: rgba(241, 235, 221, 0.8);
+            color: rgba(241, 235, 221, 0.85);
             font-weight: 300;
         }
 
@@ -153,16 +153,17 @@
             box-shadow: 0 4px 25px rgba(198, 166, 107, 0.25);
         }
 
-        /* --- Концепция / О проекте --- */
+        /* --- Концепция --- */
         .about {
             padding: 90px 0;
-            border-top: 1px solid var(--border-gold);
+            background-color: var(--bg-dark);
         }
 
         .section-title {
             font-size: 2.4rem;
             margin-bottom: 20px;
             text-align: center;
+            color: var(--ivory);
         }
 
         .gold-quote {
@@ -188,3 +189,247 @@
 
         .concept-card {
             background: var(--card-bg);
+            border: 1px solid var(--border-gold);
+            padding: 35px 25px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .concept-card .num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .concept-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: var(--ivory);
+        }
+
+        .concept-card p {
+            font-size: 0.9rem;
+            color: rgba(241, 235, 221, 0.75);
+        }
+
+        /* --- Лента Telegram --- */
+        .telegram-feed {
+            padding: 90px 0;
+            background-color: var(--bg-emerald);
+            border-top: 1px solid var(--border-gold);
+            border-bottom: 1px solid var(--border-gold);
+            text-align: center;
+        }
+
+        .widget-wrapper {
+            max-width: 650px;
+            margin: 40px auto 0;
+            background: var(--card-bg);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .widget-iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            background: #ffffff; /* Белый фон внутри виджета для читаемости постов */
+        }
+
+        /* --- Площадки / Каналы --- */
+        .channels {
+            padding: 90px 0;
+            background-color: var(--bg-dark);
+        }
+
+        .channels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .channel-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-gold);
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .channel-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--ivory);
+        }
+
+        .channel-card p {
+            font-size: 0.95rem;
+            color: rgba(241, 235, 221, 0.75);
+            margin-bottom: 25px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-gold-sm {
+            display: inline-block;
+            background: transparent;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .btn-gold-sm:hover {
+            background: var(--gold);
+            color: var(--bg-dark);
+        }
+
+        /* --- Подвал --- */
+        footer {
+            padding: 40px 0;
+            background-color: #061210;
+            border-top: 1px solid var(--border-gold);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--sage);
+        }
+
+        footer p { margin-bottom: 8px; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .section-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">Алхимия жизни <span>~ Пятый элемент</span></div>
+            <a href="https://t.me/LyisanAlchemy" target="_blank" class="nav-link-btn">Telegram</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-subtitle">Психология • Осознанность • Самопознание</div>
+            <h1>Искусство Внутренней Трансформации</h1>
+            <p>Глубинная психология, работа с тенью и переплавка личного опыта в мудрость, устойчивость и внутренний свет.</p>
+            <a href="https://t.me/LyisanAlchemy" target="_blank" class="btn-gold">Войти в пространство</a>
+        </div>
+    </section>
+
+    <!-- About Concept -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">Концепция «Пятого Элемента»</h2>
+            
+            <div class="gold-quote">
+                «Там, где разрушается прежняя форма и разлагается эго, рождается сила нового, осознанного "Я".»
+            </div>
+
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <div class="num">I. Nigredo</div>
+                    <h3>Разрушение</h3>
+                    <p>Принятие кризисов и встреча со своей Тенью как необходимое начало любого перерождения.</p>
+                </div>
+                <div class="concept-card">
+                    <div class="num">II. Albedo</div>
+                    <h3>Очищение</h3>
+                    <p>Освобождение от чужих сценариев, обретение внутренней тишины и заземления.</p>
+                </div>
+                <div class="concept-card">
+                    <div class="num">III. Rubedo</div>
+                    <h3>Целостность</h3>
+                    <p>Проявление «Пятого элемента» — вашей уникальной сути и гармонии со своим жизненным путем.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telegram Feed Widget Section -->
+    <section class="telegram-feed">
+        <div class="container">
+            <h2 class="section-title">Живая лента Telegram</h2>
+            <p style="color: var(--sage); margin-bottom: 10px;">Свежие посты и мысли из канала в реальном времени</p>
+            
+            <div class="widget-wrapper">
+                <iframe class="widget-iframe" src="https://tgstat.ru/channel/@LyisanAlchemy/widget" title="Telegram Feed"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Channels -->
+    <section class="channels">
+        <div class="container">
+            <h2 class="section-title">Авторские Пространства</h2>
+            
+            <div class="channels-grid">
+                <!-- Telegram -->
+                <div class="channel-card">
+                    <div>
+                        <h3>Telegram</h3>
+                        <p>Мысли, психологические разборы, короткие практики осознанности и прямой диалог в комментариях.</p>
+                    </div>
+                    <a href="https://t.me/LyisanAlchemy" target="_blank" class="btn-gold">Подписаться (@LyisanAlchemy)</a>
+                </div>
+
+                <!-- Dzen -->
+                <div class="channel-card">
+                    <div>
+                        <h3>Яндекс.Дзен</h3>
+                        <p>Логриды и статьи о работе с тревогой, трансформации кризисов и поиске гармонии.</p>
+                    </div>
+                    <a href="https://dzen.ru/alximiyajizni5element" target="_blank" class="btn-gold">Читать Дзен</a>
+                </div>
+
+                <!-- Contact / WhatsApp -->
+                <div class="channel-card">
+                    <div>
+                        <h3>Контакты</h3>
+                        <p>Связь по вопросам консультаций, личных сессий и сотрудничества.</p>
+                        <p style="color: var(--gold); font-size: 1.1rem; font-family: 'Cormorant Garamond', serif; margin-bottom: 15px;">+7 (965) 011-60-07</p>
+                    </div>
+                    <div class="btn-group">
+                        <a href="https://wa.me/79650116007" target="_blank" class="btn-gold-sm">WhatsApp</a>
+                        <a href="tel:+79650116007" class="btn-gold-sm">Позвонить</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© Алхимия жизни ~ Пятый элемент (Лисан)</p>
+            <p style="margin-top: 10px;">
+                <a href="https://t.me/LyisanAlchemy" target="_blank">Telegram</a> • 
+                <a href="https://dzen.ru/alximiyajizni5element" target="_blank">Дзен</a> • 
+                <a href="https://wa.me/79650116007" target="_blank">WhatsApp</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
